@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=Kanit&family=Poppins:ital,wght@1,500&display=swap");
+        * {
+            font-family: "Kanit", sans-serif;
+        }
+        body {
+            background-color: #6c7ffb; /* Dark gray background */
+            color: #FFFFFF; /* White text */
+            margin: 0;
+            padding: 20px;
+            font-family: "Kanit", sans-serif;
+        }
+        h2 {
+            text-align: center;
+            color: #00ADB5; /* Accent color */
+        }
+        .container {
+            max-width: 500px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        input[type="text"] {
+            width: calc(100% - 22px);
+            padding: 10px;
+            background-color: #393E46; /* Dark input background */
+            border: none;
+            border-radius: 4px;
+            color: #EEEEEE;
+            margin-bottom: 10px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #00ADB5; /* Accent color */
+            border: none;
+            border-radius: 4px;
+            color: #FFFFFF;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #008C94; /* Darker accent color on hover */
+        }
+        #qr-code {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+        }
+        .qr-card {
+            background-color: #393E46; /* Dark card background */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+        }
+        .main , .qrinput{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .qr {
+            border-radius: 0px 50px;
+            background-color: white;
+            width: 500px;
+            height: auto;
+            padding: 0 0 50px 0;
+            margin-top: 50px;
+        }
+        h2 {
+            color: black;
+        }
+        .qr input {
+            width: 60%;
+            margin-top: 50px;
+            padding: 50px;
+            background-color:whitesmoke ;
+            border: 1px solid #6c7ffb;
+            text-align: center;
+            color: black;
+        }
+        .qrbutton {
+            display: flex;
+            justify-content: center;
+            align-items:center ;
+        }
+        .download {
+            margin-top: 20px;
+        }

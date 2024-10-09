@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>QR Code Generator</title>
+    <!-- Include the QRCode.js library from a CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <link rel="stylesheet" href="./style.css">
+    <!-- Add some CSS for dark theme and styling -->
+</head>
+<body>
+<style>
+    
+</style>
+    <div class="main">
+        <div class="qr">
+            <h2>QR Code Generator</h2>
+            <i class="bi bi-arrow-clockwise"></i>
+            <hr>
+            <div class="qrinput">
+                <input type="text" id="text-input" placeholder="Give Input here">
+            </div>
+            <div class="qrbutton">
+                <button onclick="generateQR()">Generate QR Code</button>
+            </div>
+            <div id="qr-code"></div>
+            <div class="qrbutton download">
+                <button onclick="downloadQR()">Download QR</button>  
+            </div>          
+        </div>
+    </div>
+    <script>
+        function generateQR() {
+            // Get the text from the input box
+            var text = document.getElementById("text-input").value;
+
+            // Clear any existing QR code
+            var qrCodeContainer = document.getElementById("qr-code");
+            qrCodeContainer.innerHTML = "";
+
+            if (text.trim() === "") {
+                alert("Please enter some text.");
+                return;
+            }
+
+            // Create a new div to hold the QR code with card styling
+            var qrCard = document.createElement("div");
+            qrCard.className = "qr-card";
+            qrCodeContainer.appendChild(qrCard);
+
+            // Generate the QR code inside the card
+            new QRCode(qrCard, {
+                text: text,
+                width: 200,
+                height: 200,
+                colorDark : "#222831", /* Dark color for QR code */
+                colorLight : "#EEEEEE", /* Light background for QR code */
+            });
+        }
+
+        function downloadQR() {
+            // Get the QR code element (it should be an <img> or <canvas> inside the qr-card)
+            var qrCard = document.querySelector('.qr-card img'); 
+    
+            if (!qrCard) {
+                alert("Please generate a QR code first.");
+                return;
+            }
+    
+            // Create an <a> element for download
+            var link = document.createElement('a');
+            link.href = qrCard.src;
+            link.download = 'qr-code.png'; // You can specify the file name here
+            link.click(); // Programmatically click the link to trigger the download
+        }
+    </script>
+</body>
+</html>
