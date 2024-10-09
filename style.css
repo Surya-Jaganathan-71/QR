@@ -3,7 +3,9 @@
             font-family: "Kanit", sans-serif;
         }
         body {
-            background-color: #6c7ffb; /* Dark gray background */
+/*             background-color: #6c7ffb; */
+            background: rgb(7,55,151);
+            background: linear-gradient(90deg, rgba(7,55,151,1) 26%, rgba(6,87,172,1) 42%, rgba(0,212,255,1) 100%); 
             color: #FFFFFF; /* White text */
             margin: 0;
             padding: 20px;
